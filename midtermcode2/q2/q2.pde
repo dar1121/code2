@@ -1,4 +1,5 @@
 Object myObject; 
+String x;
 
 void setup(){
   size(600, 600); 
