@@ -26,7 +26,7 @@ void drawLine(float x, float y, float radius) {
   ypos += dy * easing;
   println(easing);
 
-  bezier(0, height, ypos - radius, xpos - radius, xpos + radius, ypos + radius, width, 0 );
+  quad(0, height, ypos - radius, xpos - radius, xpos + radius, ypos + radius, width, 0 );
 
   if(radius > 1) {
     easing = easing *2; 
