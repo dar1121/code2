@@ -6,14 +6,17 @@ void setup() {
 }
  
 void draw() {
-  background(180);
+  background(20);
   frameRate(10);
-  drawLine(width, 0, 500);
+  drawLine(width, 0, 200);
 }
  
 void drawLine(float x, float y, float radius) {
   noFill();
-  stroke(color(random(0,255),random(0,255),random(0,255)));
+  stroke(230);
+  if (mousePressed == true) {
+    stroke(color(random(0,255),random(0,255),random(0,255)));
+  }
   float easing = 0.01;
   x = mouseX;
   y = mouseY;
@@ -25,8 +28,8 @@ void drawLine(float x, float y, float radius) {
   float dy = targetY - ypos;
   ypos += dy * easing;
   println(easing);
-
-  quad(0, height, ypos - radius, xpos - radius, xpos + radius, ypos + radius, width, 0 );
+  
+  quad(xpos, height-ypos, ypos - radius, xpos - radius, xpos + radius, ypos + radius, width-xpos, ypos );
 
   if(radius > 1) {
     easing = easing *2; 
