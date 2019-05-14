@@ -2,7 +2,8 @@ float xpos;
 float ypos;
 
 void setup() {
-  size(600,600);
+  fullScreen();
+  noCursor();
 }
  
 void draw() {
@@ -13,10 +14,10 @@ void draw() {
  
 void drawLine(float x, float y, float radius) {
   noFill();
-  stroke(230);
-  if (mousePressed == true) {
+  //stroke(230);
+  //if (mousePressed == true) {
     stroke(color(random(0,255),random(0,255),random(0,255)));
-  }
+  //}
   float easing = 0.01;
   x = mouseX;
   y = mouseY;
